@@ -112,6 +112,20 @@ That was easy! Now we simply finish it off by writing the `GetValue` method:
       return val;
     }
     
+To use the value, you can call `GetValue` in FixedUpdate (or anywhere in your Unity game code for that matter):
 
+    void FixedUpdate()
+    {
+        // dummy code:
+        someObject.position.x = this.GetValue();
+    }
+
+Full Examples and Testing
+==========================
+Check out my other repository blank that is a [working example of this code](https://github.com/slessans/Simple-Unity-Socket-Server-Example/). It uses a socket server to accept
+tokens of the form x,y,z& from 1 client and updates the position of a block accordingly.
+
+For testing your own server out, it is often nice to be able to connect to it directly. Fire up the unity socket
+server and connect using any TCP client. I have written a simple open-source one in Java that can be found here: [Simple Java Socket Client](https://github.com/slessans/Simple-Socket-Client-Java)
 
 
